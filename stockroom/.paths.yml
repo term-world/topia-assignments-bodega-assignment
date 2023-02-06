@@ -1,0 +1,13 @@
+0:
+  0:
+    - 🛍️ STOCKER 1.0 🛍️
+    - Be sure that you've created a .list file with your desired stock items,
+    - listing one item per line.
+1:
+  0:
+    - Department successfully stocked! Your customers will appreciate
+    - your dedication to detail and quality, the file folks that they are.
+2:
+  0:
+    - Looks like you're missing your .list file for your department's inventory.
+    - Make that and try again.

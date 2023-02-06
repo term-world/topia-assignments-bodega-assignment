@@ -1,0 +1,71 @@
+# TODOs
+- breakroom/group-reflection.md:
+  - description: group-reflection.md has no TODO markers
+    category: Reflection
+    check: MatchFileFragment
+    options:
+      fragment: "TODO"
+      count: 0
+      exact: true
+- site/_config.yml:
+  - description: site/_config.yml has no TODO markers
+    category: Bodega Site
+    check: MatchFileFragment
+    options:
+      fragment: "TODO"
+      count: 0
+      exact: true
+- site/pages/about.md:
+  - description: about.md has no TODO markers
+    category: Bodega Site
+    check: MatchFileFragment
+    options:
+      fragment: "TODO"
+      count: 0
+      exact: true
+- description: More than one post exists in site/_posts
+  category: Bodega Site
+  check: CountCommandOutput
+  options:
+    command: "ls -d site/_posts"
+    count: 2
+- description: Individual reflections contain no TODO markers
+  category: Stockroom Stocking
+  check: ExecuteCommand
+  options:
+    command: "cd breakroom && bash .inventory"
+# REFLECTION
+- breakroom/group-reflection.md:
+  - description: group-reflection.md contains at least 300 words
+    category: Reflection
+    check: CountFileWords
+    options:
+      count: 300
+- breakroom/group-reflection.md:
+  - description: group-reflection.md checkboxes checked attested to
+    category: Reflection
+    check: MatchFileRegex
+    options:
+      regex: "\\-\\s\\[x\\]"
+      count: 3
+# REMOVAL OF EXAMPLE CONTENT
+- description: Example list file removed from stockroom
+  category: Stockroom Stocking
+  check: CountCommandOutput
+  options:
+    command: "ls stockroom/example.list"
+    count: 0
+    exact: true
+- description: Example department removed from stockroom
+  category: Stockroom Stocking
+  check: CountCommandOutput
+  options:
+    command: "ls -d stockroom/example"
+    count: 0
+    exact: true
+# COUNT ITEMS
+- description: Each department contains at least 10 items
+  category: Stockroom Stocking
+  check: ExecuteCommand
+  options:
+    command: "cd stockroom && bash .inventory"

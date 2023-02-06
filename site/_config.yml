@@ -1,0 +1,40 @@
+# Note: this file is a YML (or YAML) file. It uses indentation similar
+# to our Python programs. Follow the overall pattern to finish the basic
+# TODOs here. And, delete this TODO.
+
+remote_theme: "wowthemesnet/affiliates-jekyll-theme@1.0.3"
+
+title: "Bodega"
+email: "dluman@allegheny.edu"
+timezone: UTC
+baseurl: "/"
+permalink: "/:title/"
+logo: 'assets/images/cmpsc_100_cliv3_sm.png'
+favicon: 'assets/images/cmpsc_100_cliv3_sm.png'
+neighborhood: "TODO: NEIGHBORHOOD"
+description: "TODO: ADD DESCRIPTIVE TEXT"
+paginate: 30
+locale: en_us
+lang: en_us
+feed_items: 10
+feed_update_period: daily
+feed_update_frequency: 1
+markdown: kramdown
+kramdown:
+  syntax_highlighter_opts:
+    disable: true
+sass:
+  sass_dir: _sass
+  style: :compressed
+    
+# Social
+social:
+  github: "https://github.com/term-world"
+
+# Plugins
+plugins: 
+- jekyll-paginate
+- jekyll-sitemap
+- jekyll-feed
+- jekyll-seo-tag
+- jekyll-archives

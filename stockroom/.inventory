@@ -1,0 +1,14 @@
+#! /bin/bash
+
+DIRS=$(find . -mindepth 1 -not -path ./example -type d)
+
+if [[ -z "$DIRS" ]]; then
+  exit 1
+fi
+
+for DIR in $DIRS; do
+  items=$(ls "$DIR" | wc -l)
+  if [[ "$items" -lt 10 ]]; then
+    exit 1
+  fi
+done
