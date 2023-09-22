@@ -40,17 +40,17 @@ def main():
   n = narrator.Narrator()
 
   n.narrate()
-  n.path.change(1)
+  n.path.change({"act": 1, "scene": 0})
 
   dept = input("Department to stock: ")
   try:
     Stocker.stock(dept)
   except:
-    n.path.change(2)
+    n.path.change({"act": 2, "scene":0})
 
   n.narrate()
 
-  if n.path.number == 2:
+  if n.path.act == 2:
     sys.exit()
 
   Stocker.inventory(dept)

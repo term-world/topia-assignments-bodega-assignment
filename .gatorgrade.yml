@@ -27,7 +27,7 @@
   category: Bodega Site
   check: CountCommandOutput
   options:
-    command: "ls -d site/_posts"
+    command: "ls site/_posts"
     count: 2
 - description: Individual reflections contain no TODO markers
   category: Stockroom Stocking
